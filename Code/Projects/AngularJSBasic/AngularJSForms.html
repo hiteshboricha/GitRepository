@@ -1,0 +1,46 @@
+﻿<html>
+<head>
+    <title>Angular JS Forms</title>
+    <script src="Scripts/angular.min.js"></script>
+</head>
+<body>
+    <h1>Angular JS Forms</h1>
+
+    <div ng-app="mainApp" ng-controller="studentController">
+        <form name="studentForm" novalidate>
+            <table border = "0">
+                <tr>
+                    <td>Enter first name:</td>
+                    <td>
+                        <input name = "fname" type = "text" ng-model = "firstName" required>
+
+                        <span style = "color:red" ng-show = "studentForm.fname.$dirty && studentForm.fname.$invalid">
+
+                                <span ng-show = "studentForm.fname.$error.required">First Name is required.</span>
+                        
+                        </span>
+                    </td>
+                </tr>
+            </table>
+
+            <button ng-click="reset()" ng-disabled="studentForm.fname.$dirty && studentForm.fname.$invalid">Reset</button>
+        </form>
+    </div>
+
+    <script>
+        var mainApp = angular.module("mainApp", []);
+
+
+        mainApp.controller('studentController', function ($scope) {
+            $scope.reset = function () {
+                $scope.firstName = "First Name";
+                $scope.lastName = "Last Name";
+                $scope.email = "learn@angular.com";
+            }
+
+            $scope.reset();
+        });
+    </script>
+</body>
+</html>
+

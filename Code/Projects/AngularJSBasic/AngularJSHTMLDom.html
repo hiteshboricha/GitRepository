@@ -1,0 +1,19 @@
+﻿<html>
+<head>
+    <title>Angular JS HTML DOM</title>
+</head>
+<body>
+    <h1>Angular JS HTML DOM</h1>
+
+    <div ng-app="">
+        <input type="checkbox" ng-model="disableme" ng-init="clickCounter=5" />
+        <button ng-disabled="disableme">Click Disabled</button><br />
+        <button ng-show="disableme">Click Show Too</button><br />
+        <button ng-hide="disableme">Click Hide Too</button><br />
+        <button ng-click="clickCounter = clickCounter + 1">Click Count</button><br />
+        Total Clicks: {{ clickCounter }}
+    </div>
+    <script src="Scripts/angular.min.js"></script>
+</body>
+</html>
+

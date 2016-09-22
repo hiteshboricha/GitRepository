@@ -1,0 +1,21 @@
+﻿    <html>
+<head>
+    <title>Angular JS Expressions</title>
+</head>
+<body>
+    <h1>Angular JS Expressions</h1>
+
+    <div ng-app="" ng-init="score = [{sub:'english',marks:'55.66'},{sub:'maths',marks:'54'}];quantity=5;price=30.67;">
+
+    <p>Sum Total:{{price * quantity}}</p>
+    Total Marks:<br />
+        <ul>
+            <li ng-repeat="s in score">
+                {{ s.sub + ' = ' + s.marks }}
+            </li>
+        </ul>
+    </div>
+
+    <script src="Scripts/angular.min.js"></script>
+</body>
+</html>

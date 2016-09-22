@@ -1,0 +1,15 @@
+D:\Hitesh\Projects\AngularJS\AngularJS\bin\AngularJS.dll
+D:\Hitesh\Projects\AngularJS\AngularJS\bin\AngularJS.pdb
+D:\Hitesh\Projects\AngularJS\AngularJS\obj\Debug\AngularJS.dll
+D:\Hitesh\Projects\AngularJS\AngularJS\obj\Debug\AngularJS.pdb
+D:\Hitesh\Projects\AngularJS\AngularJS\obj\Debug\AngularJS.csprojResolveAssemblyReference.cache
+E:\GitRepository\Code\Projects\AngularJS\AngularJS\bin\AngularJS.dll.config
+E:\GitRepository\Code\Projects\AngularJS\AngularJS\bin\AngularJS.dll
+E:\GitRepository\Code\Projects\AngularJS\AngularJS\bin\AngularJS.pdb
+E:\GitRepository\Code\Projects\AngularJS\AngularJS\obj\Debug\AngularJS.csprojResolveAssemblyReference.cache
+E:\GitRepository\Code\Projects\AngularJS\AngularJS\obj\Debug\AngularJS.dll
+E:\GitRepository\Code\Projects\AngularJS\AngularJS\obj\Debug\AngularJS.pdb
+D:\Hitesh\Git\Code\Projects\AngularJS\AngularJS\bin\AngularJS.dll
+D:\Hitesh\Git\Code\Projects\AngularJS\AngularJS\bin\AngularJS.pdb
+D:\Hitesh\Git\Code\Projects\AngularJS\AngularJS\obj\Debug\AngularJS.dll
+D:\Hitesh\Git\Code\Projects\AngularJS\AngularJS\obj\Debug\AngularJS.pdb

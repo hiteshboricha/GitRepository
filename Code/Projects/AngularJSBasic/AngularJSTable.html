@@ -1,0 +1,32 @@
+﻿<html>
+<head>
+    <title>Angular JS Directives</title>
+</head>
+<body>
+    <h1>Angular JS Directives</h1>
+
+    <div ng-app="" ng-init="countries = [{locale:'en-US',name:'United States'},{locale:'en-GB',name:'United Kingdom'},
+        {locale:'en-FR',name:'France'}
+        ]">
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Local</th>
+                    <th>Country</th>
+                </tr>
+            </thead>
+            <tr ng-repeat="c in countries">
+                <td>
+                    {{c.locale}}
+                </td>
+                <td>
+                    {{c.name}}
+                </td>
+            </tr>
+        </table>
+
+    <script src="Scripts/angular.min.js"></script>
+</body>
+</html>
+

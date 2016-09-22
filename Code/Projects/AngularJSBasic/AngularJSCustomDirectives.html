@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Custom Directives</title>
+    <script src="Scripts/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="mainApp" ng-controller="mainController">
+
+        <div my-Customer></div>
+    </div>
+    <script>
+        var mainApp = angular.module("mainApp", []);
+
+        mainApp.controller("mainController", function ($scope) {
+            $scope.customer = {
+                name: "Sam",
+                address: "New street, NY"
+            };
+        });
+
+        mainApp.directive("myCustomer", function () {
+            return {
+                template: "Name: {{ customer.name }} Address: {{ customer.address }}"
+            };
+        });
+    </script>
+</body>
+</html>

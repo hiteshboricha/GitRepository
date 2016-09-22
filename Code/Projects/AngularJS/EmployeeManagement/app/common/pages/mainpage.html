@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+    <html ng-app="mainApp">
+    <head>
+        <title>Employee Management</title>
+        <base href="/">
+      
+        <!-- css -->
+        <link rel="stylesheet" href="/app/resources/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/app/resources/css/font-awesome.min.css" />
+
+        <!-- scripts -->
+        <script src="/app/resources/js/angular.min.js"></script>
+        <script src="/app/resources/js/angular-route.min.js"></script>
+        <script src="/app/config.js"></script>
+        <script src="/app/app.js"></script>
+        <script src="/app/employees/controllers/employeeController.js"></script>
+        <script src="/app/common/controllers/mainController.js"></script>
+
+    </head>
+    <body ng-controller="mainController">
+
+        <!-- HEADER AND NAVBAR -->
+        <header>
+            <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <div class="navbar-brand">{{ welcommessage }}</div>
+                </div>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/home"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="/about"><i class="fa fa-shield"></i> About</a></li>
+                    <li><a href="/contact"><i class="fa fa-comment"></i> Contact</a></li>
+                </ul>
+            </div>
+            </nav>
+        </header>
+
+        <!-- MAIN CONTENT AND INJECTED VIEWS -->
+        <div id="main">
+            <!-- angular templating -->
+            <!-- this is where content will be injected -->
+            <div ng-view></div>
+        </div>
+
+    </body>
+    </html>

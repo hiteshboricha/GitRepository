@@ -1,0 +1,39 @@
+﻿<html>
+<head>
+    <title>Angular JS Controllers</title>
+    <script src="Scripts/angular.min.js"></script>
+</head>
+<body>
+    <h1>Angular JS Controllers</h1>
+
+    <div ng-app="mainApp" ng-controller="studentController">
+        <p>Enter First Name: <input type="text" ng-model="student.firstName" /> </p>
+        <p>Enter Last Name: <input type="text" ng-model="student.lastName" /> </p>
+        <p>Enter Fees: <input type="text" ng-model="student.fees" /> </p>
+        
+        <p></p>
+        Your are entering (UPPERCASE): {{ student.fullName() | uppercase }}<br />
+        Your are entering (LOWERCASE): {{ student.fullName() | lowercase }}<br />
+        Fees: {{ student.fees | currency }}
+    </div>
+
+    <script>
+        var mainApp = angular.module("mainApp", []);
+
+        mainApp.controller('studentController', function ($scope) {
+            $scope.student = {
+                firstName: 'Angular JS',
+                lastName: 'Learner',
+                fees: 24.34,
+
+                fullName: function () {
+                    var studentObject = $scope.student;
+
+                    return studentObject.firstName + ' ' + studentObject.lastName;
+                }
+            };
+
+        });
+    </script>
+</body>
+</html>

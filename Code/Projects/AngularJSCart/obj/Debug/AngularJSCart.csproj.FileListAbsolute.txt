@@ -1,0 +1,15 @@
+D:\Hitesh\Projects\AngularJS\AngularJSCart\bin\AngularJSCart.dll
+D:\Hitesh\Projects\AngularJS\AngularJSCart\bin\AngularJSCart.pdb
+D:\Hitesh\Projects\AngularJS\AngularJSCart\obj\Debug\AngularJSCart.csprojResolveAssemblyReference.cache
+D:\Hitesh\Projects\AngularJS\AngularJSCart\obj\Debug\AngularJSCart.dll
+D:\Hitesh\Projects\AngularJS\AngularJSCart\obj\Debug\AngularJSCart.pdb
+E:\GitRepository\Code\Projects\AngularJS\AngularJSCart\bin\AngularJSCart.dll.config
+E:\GitRepository\Code\Projects\AngularJS\AngularJSCart\bin\AngularJSCart.dll
+E:\GitRepository\Code\Projects\AngularJS\AngularJSCart\bin\AngularJSCart.pdb
+E:\GitRepository\Code\Projects\AngularJS\AngularJSCart\obj\Debug\AngularJSCart.csprojResolveAssemblyReference.cache
+E:\GitRepository\Code\Projects\AngularJS\AngularJSCart\obj\Debug\AngularJSCart.dll
+E:\GitRepository\Code\Projects\AngularJS\AngularJSCart\obj\Debug\AngularJSCart.pdb
+D:\Hitesh\Git\Code\Projects\AngularJS\AngularJSCart\bin\AngularJSCart.dll
+D:\Hitesh\Git\Code\Projects\AngularJS\AngularJSCart\bin\AngularJSCart.pdb
+D:\Hitesh\Git\Code\Projects\AngularJS\AngularJSCart\obj\Debug\AngularJSCart.dll
+D:\Hitesh\Git\Code\Projects\AngularJS\AngularJSCart\obj\Debug\AngularJSCart.pdb

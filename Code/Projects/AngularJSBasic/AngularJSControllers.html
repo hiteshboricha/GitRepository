@@ -1,0 +1,34 @@
+﻿<html>
+<head>
+    <title>Angular JS Controllers</title>
+    <script src="Scripts/angular.min.js"></script>
+</head>
+<body>
+    <h1>Angular JS Controllers</h1>
+
+    <div ng-app="mainApp" ng-controller="studentController">
+        <p>Enter First Name: <input type="text" ng-model="student.firstName" /> </p>
+        <p>Enter Last Name: <input type="text" ng-model="student.lastName" /> </p>
+        <p></p>
+        Your are entering: {{ student.fullName() }}
+    </div>
+
+    <script>
+        var mainApp = angular.module("mainApp", []);
+
+        mainApp.controller('studentController', function($scope) {
+            $scope.student = {
+                firstName : 'Angular JS',
+                lastName: 'Learner',
+
+                fullName: function () {
+                    var studentObject = $scope.student;
+
+                    return studentObject.firstName + ' ' + studentObject.lastName;
+                }
+            };
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/angular.min.js"></script>
+</head>
+<body ng-app="greetings">
+    <welcome></welcome>
+
+    <script>
+        var greetingsmodule = angular.module('greetings', []);
+
+        greetingsmodule.directive('welcome', function () {
+            return {
+                restrict: "E",
+                template: "<div><b>My first plain directive: Learning angularjs...</b></div>"
+            }
+        });
+    </script>
+</body>
+</html>

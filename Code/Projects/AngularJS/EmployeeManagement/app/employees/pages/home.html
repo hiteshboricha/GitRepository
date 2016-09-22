@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Home</title>
+
+</head>
+<body>
+    <div>
+        Employee Home Page
+    </div>
+    <button ng-click="callwebapi()">Load Employees</button>&nbsp;
+    <table style="width:70%;" cellpadding="15" cellspacing="15" border="1">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>BU</th>
+            <th>ManagerId</th>
+        </tr>
+        <tr ng-repeat="e in employees">
+            <td>{{ e.Id }}</td>
+            <td>{{ e.Name }}</td>
+            <td>{{ e.BU }}</td>
+            <td>{{ e.ManagerId }}</td>
+        </tr>
+    </table>
+</body>
+</html>

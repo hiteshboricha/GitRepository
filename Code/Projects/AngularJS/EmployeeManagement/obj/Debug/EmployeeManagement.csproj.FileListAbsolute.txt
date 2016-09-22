@@ -1,0 +1,11 @@
+D:\Hitesh\Git\Code\Projects\AngularJS\EmployeeManagement\bin\EmployeeManagement.dll
+D:\Hitesh\Git\Code\Projects\AngularJS\EmployeeManagement\bin\EmployeeManagement.pdb
+D:\Hitesh\Git\Code\Projects\AngularJS\EmployeeManagement\obj\Debug\EmployeeManagement.dll
+D:\Hitesh\Git\Code\Projects\AngularJS\EmployeeManagement\obj\Debug\EmployeeManagement.pdb
+D:\Hitesh\Git\Code\Projects\AngularJS\EmployeeManagement\obj\Debug\EmployeeManagement.csprojResolveAssemblyReference.cache
+E:\GitRepository\Code\Projects\AngularJS\EmployeeManagement\bin\EmployeeManagement.dll.config
+E:\GitRepository\Code\Projects\AngularJS\EmployeeManagement\bin\EmployeeManagement.dll
+E:\GitRepository\Code\Projects\AngularJS\EmployeeManagement\bin\EmployeeManagement.pdb
+E:\GitRepository\Code\Projects\AngularJS\EmployeeManagement\obj\Debug\EmployeeManagement.dll
+E:\GitRepository\Code\Projects\AngularJS\EmployeeManagement\obj\Debug\EmployeeManagement.pdb
+E:\GitRepository\Code\Projects\AngularJS\EmployeeManagement\obj\Debug\EmployeeManagement.csprojResolveAssemblyReference.cache

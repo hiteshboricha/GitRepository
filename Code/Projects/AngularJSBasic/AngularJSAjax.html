@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="mainApp.js"></script>
+    <script src="productsController.js"></script>
+</head>
+<body ng-app="mainApp" ng-controller="productsController">
+    <button ng-click="callwebapi()">Load Products</button>&nbsp;{{ serviceresponse }}
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Category</th>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+        <tr ng-repeat="product in products">
+            <td>{{ product.Id }}</td>
+            <td>{{ product.Category }}</td>
+            <td>{{ product.Name }}</td>
+            <td>{{ product.Price | currency }}</td>
+        </tr>
+    </table>
+</body>
+</html>

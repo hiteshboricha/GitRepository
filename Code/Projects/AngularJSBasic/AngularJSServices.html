@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Angular JS Services</title>
+    <script src="Scripts/angular.min.js"></script>
+</head>
+<body>
+    <div  ng-app="mainApp" ng-controller="serviceController">
+        Enter number: <input type="number" ng-model="number" />
+        <button ng-click="callservice()">Find Square</button>
+        Answer      : {{ result }}
+    </div>
+    <script>
+        var mainApp = angular.module('mainApp', []);
+
+        mainApp.factory('MathService', function () {
+            var factory = {};
+
+            factory.multiply = function (a, b) {
+                return a * b;
+            }
+
+            return factory;
+        });
+
+        mainApp.service('CalcService', function (MathService) {
+            this.square = function (a) {
+                return MathService.multiply(a, a);
+            }
+        });
+
+        mainApp.controller('serviceController', function ($scope, CalcService) {
+            $scope.callservice = function () {
+                $scope.result = CalcService.square($scope.number);
+            }
+        });
+
+    </script>
+</body>
+</html>

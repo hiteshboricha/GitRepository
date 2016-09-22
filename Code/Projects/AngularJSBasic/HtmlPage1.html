@@ -1,0 +1,33 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="mainApp" ng-controller="mainController">
+        <button ng-click="getnamelist()">Get Names</button>
+        <ul>
+            <li ng-repeat="n in names">
+                {{ n }}
+            </li>
+        </ul>
+    </div>
+    <script>
+        var mainApp = angular.module('mainApp', []);
+
+        mainApp.service('testService', function () {
+            this.getnames = function () {
+                var namelist = { name1: "Tom", name2: "Nick", name3: "Harry" };
+                return namelist;
+            }
+        });
+
+        mainApp.controller('mainController', function ($scope, testService) {
+            $scope.getnamelist = function () {
+                $scope.names = testService.getnames();
+            }
+        });
+    </script>
+
+</body>
+</html>
