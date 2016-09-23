@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns", "DesignPatterns\DesignPatterns.csproj", "{333DA17D-0411-42AA-AB5C-8DFF893E51A9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatternsLibrary", "DesignPatternsLibrary\DesignPatternsLibrary.csproj", "{0E896F34-06EF-4D5B-8050-9BBAC3C59D99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{5D57927F-92D8-4985-947F-059465E6802C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{333DA17D-0411-42AA-AB5C-8DFF893E51A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{333DA17D-0411-42AA-AB5C-8DFF893E51A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{333DA17D-0411-42AA-AB5C-8DFF893E51A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{333DA17D-0411-42AA-AB5C-8DFF893E51A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E896F34-06EF-4D5B-8050-9BBAC3C59D99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E896F34-06EF-4D5B-8050-9BBAC3C59D99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E896F34-06EF-4D5B-8050-9BBAC3C59D99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E896F34-06EF-4D5B-8050-9BBAC3C59D99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D57927F-92D8-4985-947F-059465E6802C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D57927F-92D8-4985-947F-059465E6802C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D57927F-92D8-4985-947F-059465E6802C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D57927F-92D8-4985-947F-059465E6802C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

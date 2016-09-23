@@ -1,1 +1,0 @@
-E:\GitRepository\Code\Projects\DesignPatterns\DesignPatterns\bin\Debug\DesignPatterns.exe.config
