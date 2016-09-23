@@ -14,7 +14,12 @@ namespace DesignPatternsLibrary
 
         public virtual string Message()
         {
-            return "From EmployeeBase";
+            return "EmployeeBase Msg";
+        }
+
+        public virtual string OverrideTest()
+        {
+            return "OverrideTest from Base Class";
         }
 
     }

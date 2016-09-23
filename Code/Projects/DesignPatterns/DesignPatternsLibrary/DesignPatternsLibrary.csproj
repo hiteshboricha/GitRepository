@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\ContractEmployee.cs" />
+    <Compile Include="Abstract\DummyEmployee.cs" />
     <Compile Include="Abstract\EmployeeBase.cs" />
     <Compile Include="Abstract\PermanentEmployee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
