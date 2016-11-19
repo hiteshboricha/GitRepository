@@ -59,33 +59,33 @@ namespace WebApp
 
 
 
-            EmployeeBase baseEmployee = new PermanentEmployee();
-            EmployeeBase baseCEmployee = new ContractEmployee();
-            ContractEmployee contractEmployee = new ContractEmployee();
-            PermanentEmployee permanentEmployee = new PermanentEmployee();
+            //EmployeeBase baseEmployee = new PermanentEmployee();
+            //EmployeeBase baseCEmployee = new ContractEmployee();
+            //ContractEmployee contractEmployee = new ContractEmployee();
+            //PermanentEmployee permanentEmployee = new PermanentEmployee();
 
-            Append("EmployeeBase as permanentEmployee.GetSalary() : " + baseEmployee.GetSalary());
-            Append("EmployeeBase as contractEmployee.GetSalary() : " + baseCEmployee.GetSalary());
-            Append("permanentEmployee.GetSalary() : " + permanentEmployee.GetSalary());
-            Append("contractEmployee.GetSalary() : " + contractEmployee.GetSalary());
-            Append();
-            Append("overridden message in contractEmployee : " + contractEmployee.Message());
-            Append("baseCEmployee's new Message via EmployeeBase :" + baseCEmployee.Message());
-            Append();
-            Append("base message in contractEmployee : " + contractEmployee.BaseMessage());
-            Append();
-            Append("baseCEmployee's OverrideTest  :" + baseCEmployee.OverrideTest());
-            Append("contractEmployee's OverrideTest :" + contractEmployee.OverrideTest());
-            Append();
-            Append("//The override modifier can be added before or after public.");
-            Append("//The virtual modifier can be added before or after public.");
-            Append("//: no suitable method found to override - When we write override in abstract class");
-            Append("//Warning - hides inherited member 'OverrideTest()'. To make the current member override that implementation, add the override keyword. Otherwise add the new keyword.");
+            //Append("EmployeeBase as permanentEmployee.GetSalary() : " + baseEmployee.GetSalary());
+            //Append("EmployeeBase as contractEmployee.GetSalary() : " + baseCEmployee.GetSalary());
+            //Append("permanentEmployee.GetSalary() : " + permanentEmployee.GetSalary());
+            //Append("contractEmployee.GetSalary() : " + contractEmployee.GetSalary());
+            //Append();
+            //Append("overridden message in contractEmployee : " + contractEmployee.Message());
+            //Append("baseCEmployee's new Message via EmployeeBase :" + baseCEmployee.Message());
+            //Append();
+            //Append("base message in contractEmployee : " + contractEmployee.BaseMessage());
+            //Append();
+            //Append("baseCEmployee's OverrideTest  :" + baseCEmployee.OverrideTest());
+            //Append("contractEmployee's OverrideTest :" + contractEmployee.OverrideTest());
+            //Append();
+            //Append("//The override modifier can be added before or after public.");
+            //Append("//The virtual modifier can be added before or after public.");
+            //Append("//: no suitable method found to override - When we write override in abstract class");
+            //Append("//Warning - hides inherited member 'OverrideTest()'. To make the current member override that implementation, add the override keyword. Otherwise add the new keyword.");
 
-            ContractEmployee b = new DummyEmployee();
-            Append(b.GetSalary().ToString());
-            Append(b.Message());
-            Append(b.OverrideTest());
+            //ContractEmployee b = new DummyEmployee();
+            //Append(b.GetSalary().ToString());
+            //Append(b.Message());
+            //Append(b.OverrideTest());
 
             /*
              * Both base and derived contain method with 'new': 
