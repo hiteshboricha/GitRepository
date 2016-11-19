@@ -1,0 +1,8 @@
+E:\GitRepository\Code\Projects\DesignPatterns\WebApp\bin\WebApp.dll.config
+E:\GitRepository\Code\Projects\DesignPatterns\WebApp\bin\WebApp.dll
+E:\GitRepository\Code\Projects\DesignPatterns\WebApp\bin\WebApp.pdb
+E:\GitRepository\Code\Projects\DesignPatterns\WebApp\bin\DesignPatternsLibrary.dll
+E:\GitRepository\Code\Projects\DesignPatterns\WebApp\bin\DesignPatternsLibrary.pdb
+E:\GitRepository\Code\Projects\DesignPatterns\WebApp\obj\Debug\WebApp.csprojResolveAssemblyReference.cache
+E:\GitRepository\Code\Projects\DesignPatterns\WebApp\obj\Debug\WebApp.dll
+E:\GitRepository\Code\Projects\DesignPatterns\WebApp\obj\Debug\WebApp.pdb
