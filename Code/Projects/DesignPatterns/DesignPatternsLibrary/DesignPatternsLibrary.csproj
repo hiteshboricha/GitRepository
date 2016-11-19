@@ -43,6 +43,7 @@
     <Compile Include="Abstract\DummyEmployee.cs" />
     <Compile Include="Abstract\EmployeeBase.cs" />
     <Compile Include="Abstract\PermanentEmployee.cs" />
+    <Compile Include="Interface\IPerson.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
