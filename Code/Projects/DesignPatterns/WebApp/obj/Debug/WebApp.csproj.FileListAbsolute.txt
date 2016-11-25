@@ -6,3 +6,10 @@ E:\GitRepository\Code\Projects\DesignPatterns\WebApp\bin\DesignPatternsLibrary.p
 E:\GitRepository\Code\Projects\DesignPatterns\WebApp\obj\Debug\WebApp.csprojResolveAssemblyReference.cache
 E:\GitRepository\Code\Projects\DesignPatterns\WebApp\obj\Debug\WebApp.dll
 E:\GitRepository\Code\Projects\DesignPatterns\WebApp\obj\Debug\WebApp.pdb
+D:\Hitesh\GitRepository\Code\Projects\DesignPatterns\WebApp\bin\WebApp.dll
+D:\Hitesh\GitRepository\Code\Projects\DesignPatterns\WebApp\bin\WebApp.pdb
+D:\Hitesh\GitRepository\Code\Projects\DesignPatterns\WebApp\bin\DesignPatternsLibrary.dll
+D:\Hitesh\GitRepository\Code\Projects\DesignPatterns\WebApp\bin\DesignPatternsLibrary.pdb
+D:\Hitesh\GitRepository\Code\Projects\DesignPatterns\WebApp\obj\Debug\WebApp.csprojResolveAssemblyReference.cache
+D:\Hitesh\GitRepository\Code\Projects\DesignPatterns\WebApp\obj\Debug\WebApp.dll
+D:\Hitesh\GitRepository\Code\Projects\DesignPatterns\WebApp\obj\Debug\WebApp.pdb
