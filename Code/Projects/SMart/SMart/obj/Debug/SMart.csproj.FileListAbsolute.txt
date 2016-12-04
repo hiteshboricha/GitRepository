@@ -1,0 +1,13 @@
+E:\GitRepository\Code\Projects\SMart\SMart\bin\SMart.dll.config
+E:\GitRepository\Code\Projects\SMart\SMart\bin\SMart.dll
+E:\GitRepository\Code\Projects\SMart\SMart\bin\SMart.pdb
+E:\GitRepository\Code\Projects\SMart\SMart\bin\Newtonsoft.Json.dll
+E:\GitRepository\Code\Projects\SMart\SMart\bin\System.Net.Http.Formatting.dll
+E:\GitRepository\Code\Projects\SMart\SMart\bin\System.Web.Http.dll
+E:\GitRepository\Code\Projects\SMart\SMart\bin\System.Web.Http.WebHost.dll
+E:\GitRepository\Code\Projects\SMart\SMart\bin\Newtonsoft.Json.xml
+E:\GitRepository\Code\Projects\SMart\SMart\bin\System.Net.Http.Formatting.xml
+E:\GitRepository\Code\Projects\SMart\SMart\bin\System.Web.Http.xml
+E:\GitRepository\Code\Projects\SMart\SMart\bin\System.Web.Http.WebHost.xml
+E:\GitRepository\Code\Projects\SMart\SMart\obj\Debug\SMart.dll
+E:\GitRepository\Code\Projects\SMart\SMart\obj\Debug\SMart.pdb

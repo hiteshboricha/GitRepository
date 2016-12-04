@@ -1,0 +1,12 @@
+E:\GitRepository\Code\Projects\SMart\SMart.Data\bin\Debug\SMart.Data.dll.config
+E:\GitRepository\Code\Projects\SMart\SMart.Data\bin\Debug\SMart.Data.dll
+E:\GitRepository\Code\Projects\SMart\SMart.Data\bin\Debug\SMart.Data.pdb
+E:\GitRepository\Code\Projects\SMart\SMart.Data\bin\Debug\EntityFramework.dll
+E:\GitRepository\Code\Projects\SMart\SMart.Data\bin\Debug\EntityFramework.SqlServer.dll
+E:\GitRepository\Code\Projects\SMart\SMart.Data\bin\Debug\SMart.Entities.dll
+E:\GitRepository\Code\Projects\SMart\SMart.Data\bin\Debug\SMart.Entities.pdb
+E:\GitRepository\Code\Projects\SMart\SMart.Data\bin\Debug\EntityFramework.xml
+E:\GitRepository\Code\Projects\SMart\SMart.Data\bin\Debug\EntityFramework.SqlServer.xml
+E:\GitRepository\Code\Projects\SMart\SMart.Data\obj\Debug\SMart.Data.csprojResolveAssemblyReference.cache
+E:\GitRepository\Code\Projects\SMart\SMart.Data\obj\Debug\SMart.Data.dll
+E:\GitRepository\Code\Projects\SMart\SMart.Data\obj\Debug\SMart.Data.pdb

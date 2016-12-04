@@ -1,0 +1,4 @@
+E:\GitRepository\Code\Projects\SMart\SMart.Entities\bin\Debug\SMart.Entities.dll
+E:\GitRepository\Code\Projects\SMart\SMart.Entities\bin\Debug\SMart.Entities.pdb
+E:\GitRepository\Code\Projects\SMart\SMart.Entities\obj\Debug\SMart.Entities.dll
+E:\GitRepository\Code\Projects\SMart\SMart.Entities\obj\Debug\SMart.Entities.pdb

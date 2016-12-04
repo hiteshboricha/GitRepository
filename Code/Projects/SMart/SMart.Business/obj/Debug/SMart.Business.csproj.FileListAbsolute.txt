@@ -1,0 +1,9 @@
+E:\GitRepository\Code\Projects\SMart\SMart.Business\bin\Debug\SMart.Business.dll
+E:\GitRepository\Code\Projects\SMart\SMart.Business\bin\Debug\SMart.Business.pdb
+E:\GitRepository\Code\Projects\SMart\SMart.Business\obj\Debug\SMart.Business.dll
+E:\GitRepository\Code\Projects\SMart\SMart.Business\obj\Debug\SMart.Business.pdb
+E:\GitRepository\Code\Projects\SMart\SMart.Business\obj\Debug\SMart.Business.csprojResolveAssemblyReference.cache
+E:\GitRepository\Code\Projects\SMart\SMart.Business\bin\Debug\SMart.Entities.dll
+E:\GitRepository\Code\Projects\SMart\SMart.Business\bin\Debug\SMart.Entities.pdb
+E:\GitRepository\Code\Projects\SMart\SMart.Business\bin\Debug\SMart.Data.dll
+E:\GitRepository\Code\Projects\SMart\SMart.Business\bin\Debug\SMart.Data.pdb
