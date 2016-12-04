@@ -43,6 +43,9 @@
     <Compile Include="Abstract\DummyEmployee.cs" />
     <Compile Include="Abstract\EmployeeBase.cs" />
     <Compile Include="Abstract\PermanentEmployee.cs" />
+    <Compile Include="DIP\INotification.cs" />
+    <Compile Include="DIP\Notification.cs" />
+    <Compile Include="DIP\SMS.cs" />
     <Compile Include="Interface\IPerson.cs" />
     <Compile Include="LSP\CurrentAccount.cs" />
     <Compile Include="LSP\SavingsAccount.cs" />

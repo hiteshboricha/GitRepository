@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DIP\DependencyInversion.aspx" />
     <Content Include="LSP\LSP.aspx" />
     <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
@@ -85,6 +86,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DIP\DependencyInversion.aspx.cs">
+      <DependentUpon>DependencyInversion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DIP\DependencyInversion.aspx.designer.cs">
+      <DependentUpon>DependencyInversion.aspx</DependentUpon>
     </Compile>
     <Compile Include="LSP\LSP.aspx.cs">
       <DependentUpon>LSP.aspx</DependentUpon>
