@@ -44,9 +44,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\SMart.Data\SMart.Data.csproj">
       <Project>{679f07ee-2735-4003-918c-4fe56ee18488}</Project>
       <Name>SMart.Data</Name>

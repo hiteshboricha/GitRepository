@@ -13,6 +13,16 @@ namespace SMart.Controllers
     {
         private IProductBL _productbusiness;
 
+        public ProductController()
+        {
+            
+        }
+
+        public ProductController(IProductBL productbl)
+        {
+            _productbusiness = productbl;
+        }
+
         // POST: api/Product
         public Product Get()
         {
@@ -20,7 +30,7 @@ namespace SMart.Controllers
             product.Id = 1;
             product.Name = "Ice-cream";
 
-            _productbusiness = new ProductBL();
+            //_productbusiness = new ProductBL();
 
             var response = _productbusiness.SaveProduct(product);
 

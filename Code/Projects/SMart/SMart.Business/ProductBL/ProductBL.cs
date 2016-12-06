@@ -12,9 +12,9 @@ namespace SMart.Business
     {
         private IProductDL _productdal;
 
-        public ProductBL()
+        public ProductBL(IProductDL productdl)
         {
-            _productdal = new ProductDL();
+            _productdal = productdl;
         }
 
         public Product SaveProduct(Product product)
