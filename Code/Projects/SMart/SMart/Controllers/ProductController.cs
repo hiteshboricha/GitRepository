@@ -11,16 +11,16 @@ namespace SMart.Controllers
 {
     public class ProductController : ApiController
     {
-        private IProductBL _productbusiness;
+        private IProductRepository _productrepository;
 
         public ProductController()
         {
             
         }
 
-        public ProductController(IProductBL productbl)
+        public ProductController(IProductRepository productrepo)
         {
-            _productbusiness = productbl;
+            _productrepository = productrepo;
         }
 
         // POST: api/Product
@@ -32,7 +32,7 @@ namespace SMart.Controllers
 
             //_productbusiness = new ProductBL();
 
-            var response = _productbusiness.SaveProduct(product);
+            var response = _productrepository.SaveProduct(product);
 
             return Json<Product>(response).Content;
         }

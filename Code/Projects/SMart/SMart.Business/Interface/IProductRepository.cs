@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SMart.Business
 {
-    public interface IProductBL
+    public interface IProductRepository
     {
         Product SaveProduct(Product product);
     }

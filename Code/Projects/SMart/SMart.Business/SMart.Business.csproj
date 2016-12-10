@@ -39,8 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interface\IProductBL.cs" />
-    <Compile Include="ProductBL\ProductBL.cs" />
+    <Compile Include="Interface\IProductRepository.cs" />
+    <Compile Include="ProductBL\ProductRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

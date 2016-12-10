@@ -1,8 +1,12 @@
-﻿using SMart.Container;
+﻿using Microsoft.Practices.Unity;
+using SMart.Business;
+using SMart.Controllers;
+using SMart.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Dependencies;
 
 namespace SMart
 {
@@ -21,7 +25,14 @@ namespace SMart
                 defaults: new { id = RouteParameter.Optional }
             );
 
-            config.DependencyResolver = CastleHelper.GetDependencyResolver();
+            //config.DependencyResolver = CastleHelper.GetDependencyResolver();
+            
+
+            var container = new UnityContainer();
+            container.RegisterType<IProductDL, ProductDL>(new HierarchicalLifetimeManager());
+            container.RegisterType<IProductRepository, ProductRepository>(new HierarchicalLifetimeManager());
+            
+            config.DependencyResolver = new UnityBootStrapper(container);
         }
     }
 }

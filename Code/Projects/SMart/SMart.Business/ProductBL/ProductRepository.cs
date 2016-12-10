@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace SMart.Business
 {
-    public class ProductBL : IProductBL
+    public class ProductRepository : IProductRepository
     {
         private IProductDL _productdal;
 
-        public ProductBL(IProductDL productdl)
+        public ProductRepository(IProductDL productdl)
         {
             _productdal = productdl;
         }
