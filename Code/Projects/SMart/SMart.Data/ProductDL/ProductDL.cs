@@ -9,8 +9,12 @@ namespace SMart.Data
 {
     public class ProductDL : IProductDL
     {
-        public Product SaveProduct(Product product)
+        public Product GetProduct()
         {
+            Product product = new Product();
+            product.Id = 1;
+            product.Name = "Ice-cream";
+
             return product;
         }
     }

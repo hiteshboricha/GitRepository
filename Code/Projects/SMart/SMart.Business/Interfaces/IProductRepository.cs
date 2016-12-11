@@ -10,6 +10,7 @@ namespace SMart.Business
 {
     public interface IProductRepository
     {
-        Product SaveProduct(Product product);
+        Product GetProduct();
+        Product CallMethodInjection();
     }
 }

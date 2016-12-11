@@ -17,9 +17,14 @@ namespace SMart.Business
             _productdal = productdl;
         }
 
-        public Product SaveProduct(Product product)
+        public Product GetProduct()
         {
-            return _productdal.SaveProduct(product);
+            return _productdal.GetProduct();
+        }
+
+        public Product CallMethodInjection()
+        {
+            return GetProduct();
         }
     }
 }

@@ -9,6 +9,6 @@ namespace SMart.Data
 {
     public interface IProductDL
     {
-        Product SaveProduct(Product product);
+        Product GetProduct();
     }
 }

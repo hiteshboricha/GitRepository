@@ -1,4 +1,5 @@
-﻿using SMart.Business;
+﻿using Microsoft.Practices.Unity;
+using SMart.Business;
 using SMart.Entities;
 using System;
 using System.Collections.Generic;
@@ -15,24 +16,36 @@ namespace SMart.Controllers
 
         public ProductController()
         {
-            
+
         }
 
+        //Constructor Injection example
         public ProductController(IProductRepository productrepo)
         {
             _productrepository = productrepo;
         }
 
-        // POST: api/Product
+        ////Property Injection example
+        //[Dependency]
+        //public IProductRepository Repository
+        //{
+        //    get
+        //    {
+        //        return _productrepository;
+        //    }
+        //    set
+        //    {
+        //        _productrepository = value;
+        //    }
+        //}
+
         public Product Get()
         {
-            Product product = new Product();
-            product.Id = 1;
-            product.Name = "Ice-cream";
+            ////Property Injection example
+            //var response = Repository.GetProduct();
 
-            //_productbusiness = new ProductBL();
-
-            var response = _productrepository.SaveProduct(product);
+            //Constructor Injection example
+            var response = _productrepository.GetProduct();
 
             return Json<Product>(response).Content;
         }
