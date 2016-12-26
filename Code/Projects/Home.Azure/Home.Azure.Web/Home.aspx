@@ -22,12 +22,12 @@
                 </asp:TemplateField>
                 <asp:TemplateField HeaderText="Length" HeaderStyle-Width="25%" ItemStyle-Width="25%">
                     <ItemTemplate>
-                        <asp:Label ID="Label3" runat="server" Text='<%#Eval("Properties.Length") %>'></asp:Label>
+                        <asp:Label ID="Label3" runat="server" Text='<%#Eval("Length") %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
                 <asp:TemplateField HeaderText="ContentType" HeaderStyle-Width="25%" ItemStyle-Width="25%">
                     <ItemTemplate>
-                        <asp:Label ID="Label4" runat="server" Text='<%#Eval("Properties.ContentType") %>'></asp:Label>
+                        <asp:Label ID="Label4" runat="server" Text='<%#Eval("ContentType") %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>

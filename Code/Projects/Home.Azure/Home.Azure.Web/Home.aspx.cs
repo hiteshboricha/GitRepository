@@ -33,9 +33,12 @@ namespace Home.Azure.Web
 
         protected void btnUpload_Click(object sender, EventArgs e)
         {
-            //CloudBlobContainer container = CreateContainer();
             CloudBlockBlob blockblob = CreateBlockBlob(container);
-            
+
+            // Set the metadata into the blob
+            blockblob.Metadata["FileName"] = flupld.FileName;
+            blockblob.SetMetadata();
+
             using (var fileStream = flupld.FileContent)
             {
                 blockblob.UploadFromStream(fileStream);
@@ -48,7 +51,16 @@ namespace Home.Azure.Web
         {
             var blobs = container.ListBlobs(null, true, BlobListingDetails.All).Cast<CloudBlockBlob>();
 
-            grdBlob.DataSource = blobs;
+            var newblobs = from b in blobs
+                           select new
+                            {
+                                Name = b.Metadata["FileName"],
+                                Uri = b.Uri,
+                                Length = b.Properties.Length,
+                                ContentType = b.Properties.ContentType
+                            };
+
+            grdBlob.DataSource = newblobs;
             grdBlob.DataBind();
         }
 
