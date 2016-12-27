@@ -119,3 +119,5 @@ D:\Hitesh\GitRepository\Code\Projects\Home.Azure\Home.Azure.Web\bin\zh-Hant\Syst
 D:\Hitesh\GitRepository\Code\Projects\Home.Azure\Home.Azure.Web\obj\Debug\Home.Azure.Web.csprojResolveAssemblyReference.cache
 D:\Hitesh\GitRepository\Code\Projects\Home.Azure\Home.Azure.Web\obj\Debug\Home.Azure.Web.dll
 D:\Hitesh\GitRepository\Code\Projects\Home.Azure\Home.Azure.Web\obj\Debug\Home.Azure.Web.pdb
+D:\Hitesh\GitRepository\Code\Projects\Home.Azure\Home.Azure.Web\bin\Microsoft.ServiceBus.dll
+D:\Hitesh\GitRepository\Code\Projects\Home.Azure\Home.Azure.Web\bin\Microsoft.ServiceBus.xml
