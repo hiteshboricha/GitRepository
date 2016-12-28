@@ -1,14 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ServiceBus.aspx.cs" Inherits="Home.Azure.Web.ServiceBus" %>
 <asp:Content ID="Content3" ContentPlaceHolderID="maincontent" runat="server">
     <div class="w3-container" style="width:100%;">
-        <asp:Label ID="lblMessage" runat="server">
-            <br />
-        </asp:Label>
         <label class="w3-label w3-text-blue"><b>Browse File</b></label><br />
         <asp:FileUpload ID="flupld" runat="server" CssClass="w3-btn w3-grey" />
         <asp:Button ID="btnUpload" runat="server" Text="Upload File" OnClick="btnUpload_Click" 
              CssClass="w3-btn w3-blue"/>
         <br /><br /><br />
+        <asp:Label ID="lblMessage" runat="server">
+            <br />
+        </asp:Label>
         <%--<asp:GridView ID="grdBlob" runat="server" CssClass="w3-table w3-striped" AutoGenerateColumns="false"
             Width="100%">
             <Columns>

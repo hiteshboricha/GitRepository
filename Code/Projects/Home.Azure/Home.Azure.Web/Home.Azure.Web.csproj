@@ -106,7 +106,9 @@
     <Content Include="Home.aspx" />
     <Content Include="ServiceBus.aspx" />
     <Content Include="Styles\w3schools.css" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Default.aspx.cs">

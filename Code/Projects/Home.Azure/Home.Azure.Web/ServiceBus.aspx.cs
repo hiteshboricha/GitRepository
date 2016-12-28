@@ -36,7 +36,8 @@ namespace Home.Azure.Web
             MessageList = GenerateMessages(issues);
 
             CollectUserInput();
-            Queue();
+            //Queue();
+            Subscribe();
         }
 
         private DataTable ParseCSVFile()
@@ -102,91 +103,103 @@ namespace Home.Azure.Web
             //saskeyvalue = "Endpoint=sb://homeazuresnamespace.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=D3s/kKFJTpXHTsLMFMvhAmY/MvNQsplptzOPofyZuHs=";
         }
 
-        async Task Queue()
+        private void Subscribe()
         {
-            try
+            // Create the topic if it does not exist already.
+            string connectionString = CloudConfigurationManager.GetSetting("Microsoft.ServiceBus.ConnectionString");
+
+            var namespaceManager = NamespaceManager.CreateFromConnectionString(connectionString);
+
+            namespaceManager.DeleteTopic("AddressSubscription");
+
+            if (!namespaceManager.TopicExists("AddressTopic"))
             {
-                string _connectionString = CloudConfigurationManager.GetSetting("Microsoft.ServiceBus.ConnectionString");
-
-                //Create management credentials
-                TokenProvider credentials = TokenProvider.CreateSharedAccessSignatureTokenProvider(saskeyname, saskeyvalue);
-                
-                //NamespaceManager namespaceClient =
-                //    new NamespaceManager(ServiceBusEnvironment.CreateServiceUri("http", ServiceNamespace, string.Empty));
-
-                NamespaceManager namespaceClient = NamespaceManager.CreateFromConnectionString(_connectionString);
-
-                QueueDescription myQueue;
-
-                if (namespaceClient.QueueExists("IssueTrackingQueue"))
-                {
-                    namespaceClient.DeleteQueue("IssueTrackingQueue");
-                }
-
-                myQueue = namespaceClient.CreateQueue("IssueTrackingQueue");
-
-                MessagingFactory factory =
-                    MessagingFactory.Create(ServiceBusEnvironment.CreateServiceUri("sb", ServiceNamespace, string.Empty), credentials);
-
-                QueueClient queueclient = factory.CreateQueueClient("IssueTrackingQueue");
-                //QueueClient queueclient = QueueClient.CreateFromConnectionString("ServiceBusConnectionString", "IssueTrackingQueue");
-
-                StringBuilder sb = new StringBuilder();
-                sb.Append("Now sending messages to the queue.");
-                DisplayMessage(sb);
-
-                for (int i = 0; i < 6; i++)
-                {
-                    var issue = MessageList[i];
-
-                    issue.Label = issue.Properties["IssueTitle"].ToString();
-
-                    try
-                    {
-                        await queueclient.SendAsync(issue).ContinueWith(t =>
-                        {
-                            if (t.Exception != null)
-                            {
-                                // Throw any exceptions that cannot be handled here
-                                throw t.Exception.Flatten();
-                            }
-                        }); ;
-                    }
-                    catch(Exception ex)
-                    {
-                        DisplayMessage(ex.Message);
-                    }
-
-                    sb.Append(string.Format("Message sent: {0}, {1}", issue.Label, issue.MessageId));
-                    DisplayMessage(sb);
-                }
-
-                //Create a receiver and receive messages from the queue
-                BrokeredMessage msg;
-
-                while ((msg = await queueclient.ReceiveAsync(new TimeSpan(hours: 0, minutes: 1, seconds: 5))) != null)
-                {
-                    sb.Append(string.Format("Message received: {0}, {1}, {2}", msg.SequenceNumber, msg.Label, msg.MessageId));
-                    DisplayMessage(sb);
-                    msg.Complete();
-
-                    sb.Append("Processing message (sleeping...)");
-                    DisplayMessage(sb);
-                    Thread.Sleep(1000);
-                }
-
-                factory.Close();
-                queueclient.Close();
-                namespaceClient.DeleteQueue("IssueTrackingQueue");
+                namespaceManager.CreateTopic("AddressTopic");
             }
-            catch (Exception e)
-            {
-                DisplayMessage(e.StackTrace + " - " + e.StackTrace);
-            }
+
+            TopicClient client = TopicClient.CreateFromConnectionString(connectionString, "AddressTopic");
+            client.Send(new BrokeredMessage());
         }
+
+        //async Task Queue()
+        //{
+        //    try
+        //    {
+        //        string _connectionString = CloudConfigurationManager.GetSetting("Microsoft.ServiceBus.ConnectionString");
+
+        //        //Create management credentials
+        //        TokenProvider credentials = TokenProvider.CreateSharedAccessSignatureTokenProvider(saskeyname, saskeyvalue);
+                
+        //        //NamespaceManager namespaceClient =
+        //        //    new NamespaceManager(ServiceBusEnvironment.CreateServiceUri("http", ServiceNamespace, string.Empty));
+
+        //        NamespaceManager namespaceClient = NamespaceManager.CreateFromConnectionString(_connectionString);
+
+        //        QueueDescription myQueue;
+
+        //        if (namespaceClient.QueueExists("IssueTrackingQueue"))
+        //        {
+        //            namespaceClient.DeleteQueue("IssueTrackingQueue");
+        //        }
+
+        //        myQueue = namespaceClient.CreateQueue("IssueTrackingQueue");
+
+        //        MessagingFactory factory =
+        //            MessagingFactory.Create(ServiceBusEnvironment.CreateServiceUri("sb", ServiceNamespace, string.Empty), credentials);
+
+        //        QueueClient queueclient = factory.CreateQueueClient("IssueTrackingQueue");
+        //        //QueueClient queueclient = QueueClient.CreateFromConnectionString("ServiceBusConnectionString", "IssueTrackingQueue");
+
+        //        StringBuilder sb = new StringBuilder();
+        //        sb.Append("Now sending messages to the queue.");
+        //        DisplayMessage(sb);
+
+        //        for (int i = 0; i < 6; i++)
+        //        {
+        //            var issue = MessageList[i];
+
+        //            issue.Label = issue.Properties["IssueTitle"].ToString();
+
+        //            try
+        //            {
+        //                queueclient.Send(issue);
+        //            }
+        //            catch(Exception ex)
+        //            {
+        //                DisplayMessage(ex.Message);
+        //            }
+
+        //            sb.Append(string.Format("Message sent: {0}, {1}", issue.Label, issue.MessageId));
+        //            DisplayMessage(sb);
+        //        }
+
+        //        //Create a receiver and receive messages from the queue
+        //        BrokeredMessage msg;
+
+        //        while ((msg = queueclient.Receive(new TimeSpan(hours: 0, minutes: 0, seconds: 5))) != null)
+        //        {
+        //            sb.Append(string.Format("Message received: {0}, {1}, {2}", msg.SequenceNumber, msg.Label, msg.MessageId));
+        //            DisplayMessage(sb);
+        //            msg.Complete();
+
+        //            sb.Append("Processing message (sleeping...)");
+        //            DisplayMessage(sb);
+        //            Thread.Sleep(1000);
+        //        }
+
+        //        factory.Close();
+        //        queueclient.Close();
+        //        namespaceClient.DeleteQueue("IssueTrackingQueue");
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        DisplayMessage(e.StackTrace + " - " + e.StackTrace);
+        //    }
+        //}
 
         private void DisplayMessage(StringBuilder sb)
         {
+            sb.Append("<br />");
             lblMessage.Text = sb.ToString();
         }
 
