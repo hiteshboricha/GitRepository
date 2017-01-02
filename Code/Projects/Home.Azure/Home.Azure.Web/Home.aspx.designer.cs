@@ -13,15 +13,6 @@ namespace Home.Azure.Web {
     public partial class Home {
         
         /// <summary>
-        /// flupld control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload flupld;
-        
-        /// <summary>
         /// btnUpload control.
         /// </summary>
         /// <remarks>
@@ -31,12 +22,21 @@ namespace Home.Azure.Web {
         protected global::System.Web.UI.WebControls.Button btnUpload;
         
         /// <summary>
-        /// grdBlob control.
+        /// lblMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdBlob;
+        protected global::System.Web.UI.WebControls.Label lblMessage;
+        
+        /// <summary>
+        /// grdTable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView grdTable;
     }
 }

@@ -21,9 +21,9 @@ namespace Home.Azure.Web
         private List<BrokeredMessage> MessageList;
 
         //Credentials
-        private string ServiceNamespace;
-        private string saskeyname;
-        private string saskeyvalue;
+        //private string ServiceNamespace;
+        //private string saskeyname;
+        //private string saskeyvalue;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -32,18 +32,21 @@ namespace Home.Azure.Web
 
         protected void btnUpload_Click(object sender, EventArgs e)
         {
-            issues = ParseCSVFile();
-            MessageList = GenerateMessages(issues);
+            //issues = ParseCSVFile();
+            //MessageList = GenerateMessages(issues);
 
-            CollectUserInput();
+            //CollectUserInput();
             //Queue();
-            Subscribe();
+
+            //Subscribe(MessageList);
+            CreateSubscription();
+            CreateTopic();
         }
 
         private DataTable ParseCSVFile()
         {
             DataTable tableIssues = new DataTable("Issues");
-            string path = Server.MapPath("~/Uploads/Data.csv");
+            string path = Server.MapPath("~/Uploads/data.csv");
 
             try
             {
@@ -97,28 +100,44 @@ namespace Home.Azure.Web
 
         private void CollectUserInput()
         {
-            ServiceNamespace = "homeazuresnamespace";
-            saskeyname = "RootManageSharedAccessKey";
-            saskeyvalue = "D3s/kKFJTpXHTsLMFMvhAmY/MvNQsplptzOPofyZuHs=";
+            //ServiceNamespace = "homeazuresnamespace";
+            //saskeyname = "RootManageSharedAccessKey";
+            //saskeyvalue = "D3s/kKFJTpXHTsLMFMvhAmY/MvNQsplptzOPofyZuHs=";
             //saskeyvalue = "Endpoint=sb://homeazuresnamespace.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=D3s/kKFJTpXHTsLMFMvhAmY/MvNQsplptzOPofyZuHs=";
         }
 
-        private void Subscribe()
+        //private void Subscribe(List<BrokeredMessage> list)
+        private void CreateTopic()
         {
             // Create the topic if it does not exist already.
             string connectionString = CloudConfigurationManager.GetSetting("Microsoft.ServiceBus.ConnectionString");
 
             var namespaceManager = NamespaceManager.CreateFromConnectionString(connectionString);
 
-            namespaceManager.DeleteTopic("AddressSubscription");
-
-            if (!namespaceManager.TopicExists("AddressTopic"))
+            if (!namespaceManager.TopicExists("addresstopic"))
             {
-                namespaceManager.CreateTopic("AddressTopic");
+                namespaceManager.CreateTopic("addresstopic");
             }
 
-            TopicClient client = TopicClient.CreateFromConnectionString(connectionString, "AddressTopic");
+            TopicClient client = TopicClient.CreateFromConnectionString(connectionString, "addresstopic");
             client.Send(new BrokeredMessage());
+
+            //foreach (BrokeredMessage msg in list)
+            //{
+            //    client.Send(msg);
+            //}
+        }
+
+        private void CreateSubscription()
+        {
+            string connectionString = CloudConfigurationManager.GetSetting("Microsoft.ServiceBus.ConnectionString");
+
+            var namespaceManager = NamespaceManager.CreateFromConnectionString(connectionString);
+
+            if (!namespaceManager.SubscriptionExists("addresstopic", "addresssubscription"))
+            {
+                namespaceManager.CreateSubscription("addresstopic", "addresssubscription");
+            }
         }
 
         //async Task Queue()
