@@ -97,6 +97,7 @@ namespace Home.Azure.Web
                                   City = e.City,
                                   Date = e.Timestamp.ToString("dd-MM-yyyy hh:mm:ss tt"),
                                   Weather = e.Weather
+                              };
 
                 grdTable.DataSource = newlist.OrderByDescending(o => o.Date);
                 grdTable.DataBind();
