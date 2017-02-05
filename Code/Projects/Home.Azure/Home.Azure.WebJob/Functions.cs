@@ -32,7 +32,8 @@ namespace Home.Azure.WebJob
             pin.PartitionKey = "New Panvel";
             pin.PinCode = "410206";
             pin.City = "New Panvel";
-            pin.RowKey = "faa419e4-4d1e-4632-a49e-7ed3a8ef3614";
+            pin.RowKey = "9dfe021f-adf7-4b82-b43d-fc68d4190246";
+            //pin.RowKey = message;
 
             pin.Weather = "Shine and sunny";
 

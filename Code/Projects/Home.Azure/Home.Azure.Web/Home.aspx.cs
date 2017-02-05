@@ -45,15 +45,15 @@ namespace Home.Azure.Web
             {
                 CloudBlockBlob blockblob = CreateBlockBlob(container);
 
-                // Set the metadata into the blob
-                blockblob.Metadata["FileName"] = Path.GetFileName(Server.MapPath("~/Uploads/pincodes.txt"));
-                blockblob.SetMetadata();
-
                 string filepath = Path.GetFullPath(Server.MapPath("~/Uploads/pincodes.txt"));
                 using (FileStream fs = new FileStream(filepath, FileMode.Open, FileAccess.Read))
                 {
                     blockblob.UploadFromStream(fs);
                 }
+
+                // Set the metadata into the blob
+                blockblob.Metadata["FileName"] = Path.GetFileName(Server.MapPath("~/Uploads/pincodes.txt"));
+                blockblob.SetMetadata();
 
                 lblMessage.Text += "File uploaded successfully!" + "<br />";
 
@@ -79,25 +79,32 @@ namespace Home.Azure.Web
 
         private void BindTableGrid()
         {
-            // Create the table client.
-            CloudTableClient tableClient = storageAccount.CreateCloudTableClient();
+            try
+            {
+                // Create the table client.
+                CloudTableClient tableClient = storageAccount.CreateCloudTableClient();
 
-            // Create the CloudTable object that represents the "pincodes" table.
-            CloudTable table = tableClient.GetTableReference("pincodes");
+                // Create the CloudTable object that represents the "pincodes" table.
+                CloudTable table = tableClient.GetTableReference("pincodes");
 
-            var entities = table.ExecuteQuery(new TableQuery<PinCodes>()).ToList();
+                var entities = table.ExecuteQuery(new TableQuery<PinCodes>()).ToList();
 
-            var newlist = from e in entities
-                          select new
-                          {
-                              GUID = e.RowKey,
-                              Pin = e.PinCode,
-                              City = e.City,
-                              Date = e.Timestamp.ToString("dd-MM-yyyy hh:mm:ss tt")
-                          };
+                var newlist = from e in entities
+                              select new
+                              {
+                                  GUID = e.RowKey,
+                                  Pin = e.PinCode,
+                                  City = e.City,
+                                  Date = e.Timestamp.ToString("dd-MM-yyyy hh:mm:ss tt"),
+                                  Weather = e.Weather
 
-            grdTable.DataSource = newlist.OrderByDescending(o => o.Date);
-            grdTable.DataBind();
+                grdTable.DataSource = newlist.OrderByDescending(o => o.Date);
+                grdTable.DataBind();
+            }
+            catch (Exception ex)
+            {
+                lblMessage.Text = ex.Message;
+            }
         }
 
 
@@ -129,7 +136,7 @@ namespace Home.Azure.Web
             // Create the container if it doesn't already exist.
             container.CreateIfNotExists();
             BlobContainerPermissions permissions = new BlobContainerPermissions();
-            permissions.PublicAccess = BlobContainerPublicAccessType.Blob;
+            permissions.PublicAccess = BlobContainerPublicAccessType.Container;
 
             container.SetPermissions(permissions);
 
@@ -179,33 +186,42 @@ namespace Home.Azure.Web
 
         private void InsertInTableBlob(string value)
         {
-            // Create the table client.
-            CloudTableClient tableClient = storageAccount.CreateCloudTableClient();
-
-            // Create the CloudTable object that represents the "pincodes" table.
-            CloudTable table = tableClient.GetTableReference("pincodes");
-            table.CreateIfNotExists();
-
-            // Create a new pincode entity.
-            PinCodes pin = new PinCodes(value == "410206" ? "New Panvel" : "Mumbai");
-            pin.PinCode = value;
-
-            if (value == "410206")
+            try
             {
-                pin.City = "New Panvel";
+                // Create the table client.
+                CloudTableClient tableClient = storageAccount.CreateCloudTableClient();
+
+                // Create the CloudTable object that represents the "pincodes" table.
+                CloudTable table = tableClient.GetTableReference("pincodes");
+                table.CreateIfNotExists();
+
+                // Create a new pincode entity.
+                PinCodes pin = new PinCodes(value == "410206" ? "New Panvel" : "Mumbai");
+                pin.PinCode = value;
+
+                if (value == "410206")
+                {
+                    pin.City = "New Panvel";
+                }
+                else if (value == "400010")
+                {
+                    pin.City = "Mumbai";
+                }
+
+                pin.Weather = "Unknown";
+
+                // Create the TableOperation object that inserts the pincode entity.
+                TableOperation insertOperation = TableOperation.Insert(pin);
+
+                // Execute the insert operation.
+                table.Execute(insertOperation);
+
+                lblMessage.Text += "Pin code saved successfully!" + "<br />";
             }
-            else if (value == "400010")
+            catch (Exception ex)
             {
-                pin.City = "Mumbai";
+                lblMessage.Text = ex.Message;
             }
-
-            // Create the TableOperation object that inserts the pincode entity.
-            TableOperation insertOperation = TableOperation.Insert(pin);
-
-            // Execute the insert operation.
-            table.Execute(insertOperation);
-
-            lblMessage.Text += "Pin code saved successfully!" + "<br />";
         }
 
         private void CreateSubscriptionAndTopic()
@@ -235,6 +251,11 @@ namespace Home.Azure.Web
             {
                 lblMessage.Text = ex.Message;
             }
+        }
+
+        protected void btnRefreshGrid_Click(object sender, EventArgs e)
+        {
+            BindTableGrid();
         }
     }
 }

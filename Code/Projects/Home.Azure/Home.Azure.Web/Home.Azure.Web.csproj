@@ -159,7 +159,7 @@
     <Content Include="Site.Master" />
     <Content Include="Uploads\data.csv" />
     <Content Include="Properties\webjobs-list.json" />
-    <None Include="Properties\PublishProfiles\azurehomeweb.pubxml" />
+    <None Include="Properties\PublishProfiles\homeazureweb.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

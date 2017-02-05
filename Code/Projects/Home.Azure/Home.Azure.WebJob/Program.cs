@@ -25,7 +25,7 @@ namespace Home.Azure.WebJob
             
             // The following code ensures that the WebJob will be running continuously
 
-            Functions.ProcessQueueMessage("web job hosted test");
+            Functions.ProcessQueueMessage("Web job tests");
 
             JobHostConfiguration config = new JobHostConfiguration();
             ServiceBusConfiguration serviceBusConfig = new ServiceBusConfiguration

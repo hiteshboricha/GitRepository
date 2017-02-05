@@ -53,3 +53,4 @@ E:\GitRepository\Code\Projects\Home.Azure\Home.Azure.Entities\bin\Debug\zh-Hans\
 E:\GitRepository\Code\Projects\Home.Azure\Home.Azure.Entities\bin\Debug\zh-Hant\System.Spatial.resources.dll
 E:\GitRepository\Code\Projects\Home.Azure\Home.Azure.Entities\obj\Debug\Home.Azure.Entities.dll
 E:\GitRepository\Code\Projects\Home.Azure\Home.Azure.Entities\obj\Debug\Home.Azure.Entities.pdb
+E:\GitRepository\Code\Projects\Home.Azure\Home.Azure.Entities\obj\Debug\Home.Azure.Entities.csprojResolveAssemblyReference.cache

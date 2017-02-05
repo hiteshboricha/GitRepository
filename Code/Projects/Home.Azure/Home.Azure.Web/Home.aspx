@@ -2,9 +2,18 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="maincontent" runat="server">
     <div class="w3-container" style="width:100%;">
-        <label class="w3-label w3-text-blue"><b>Upload Pin Codes</b></label>
+        <table style="width:100%">
+            <tr>
+                <td><label class="w3-label w3-text-blue"><b>Upload Pin Codes</b></label>
         <asp:Button ID="btnUpload" runat="server" Text="Upload" OnClick="btnUpload_Click" 
+             CssClass="w3-btn w3-blue"/></td>
+                <td>
+                    <label class="w3-label w3-text-blue"><b>Refresh Grid</b></label>
+        <asp:Button ID="btnRefreshGrid" runat="server" Text="Refresh Grid" OnClick="btnRefreshGrid_Click"
              CssClass="w3-btn w3-blue"/>
+                </td>
+            </tr>
+        </table>
         <br /><br />
         <asp:Label ID="lblMessage" runat="server">
             <br />
@@ -32,6 +41,11 @@
                 <asp:TemplateField HeaderText="Date" HeaderStyle-Width="25%" ItemStyle-Width="25%">
                     <ItemTemplate>
                         <asp:Label ID="Label4" runat="server" Text='<%#Eval("Date") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Weather" HeaderStyle-Width="25%" ItemStyle-Width="25%">
+                    <ItemTemplate>
+                        <asp:Label ID="Label4" runat="server" Text='<%#Eval("Weather") %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>
