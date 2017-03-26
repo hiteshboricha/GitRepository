@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DIP\DependencyInversion.aspx" />
+    <Content Include="Factory\FactoryPattern.aspx" />
     <Content Include="LSP\LSP.aspx" />
     <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
@@ -93,6 +94,13 @@
     </Compile>
     <Compile Include="DIP\DependencyInversion.aspx.designer.cs">
       <DependentUpon>DependencyInversion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Factory\FactoryPattern.aspx.cs">
+      <DependentUpon>FactoryPattern.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Factory\FactoryPattern.aspx.designer.cs">
+      <DependentUpon>FactoryPattern.aspx</DependentUpon>
     </Compile>
     <Compile Include="LSP\LSP.aspx.cs">
       <DependentUpon>LSP.aspx</DependentUpon>

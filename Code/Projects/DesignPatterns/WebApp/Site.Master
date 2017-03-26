@@ -11,6 +11,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
+        <a href="../Default.aspx">Back To Home</a><br /><br /><br />
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>

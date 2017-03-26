@@ -2,7 +2,6 @@ E:\GitRepository\Code\Projects\DesignPatterns\DesignPatternsLibrary\bin\Debug\De
 E:\GitRepository\Code\Projects\DesignPatterns\DesignPatternsLibrary\bin\Debug\DesignPatternsLibrary.pdb
 E:\GitRepository\Code\Projects\DesignPatterns\DesignPatternsLibrary\obj\Debug\DesignPatternsLibrary.dll
 E:\GitRepository\Code\Projects\DesignPatterns\DesignPatternsLibrary\obj\Debug\DesignPatternsLibrary.pdb
-E:\GitRepository\Code\Projects\DesignPatterns\DesignPatternsLibrary\obj\Debug\DesignPatternsLibrary.csprojResolveAssemblyReference.cache
 D:\Hitesh\GitRepository\Code\Projects\DesignPatterns\DesignPatternsLibrary\bin\Debug\DesignPatternsLibrary.dll
 D:\Hitesh\GitRepository\Code\Projects\DesignPatterns\DesignPatternsLibrary\bin\Debug\DesignPatternsLibrary.pdb
 D:\Hitesh\GitRepository\Code\Projects\DesignPatterns\DesignPatternsLibrary\obj\Debug\DesignPatternsLibrary.csprojResolveAssemblyReference.cache

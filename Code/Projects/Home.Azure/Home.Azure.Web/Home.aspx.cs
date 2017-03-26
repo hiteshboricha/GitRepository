@@ -27,15 +27,22 @@ namespace Home.Azure.Web
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (container == null)
+            try
             {
-                container = CreateContainer();
-            }
+                if (container == null)
+                {
+                    container = CreateContainer();
+                }
 
-            if (!IsPostBack)
+                if (!IsPostBack)
+                {
+                    BindTableGrid();
+                    //BindBlobGrid();
+                }
+            }
+            catch (Exception ex)
             {
-                BindTableGrid();
-                //BindBlobGrid();
+                lblMessage.Text = ex.Message;
             }
         }
 

@@ -1,0 +1,11 @@
+{
+  "name": "nodejsapp",
+  "version": "1.0.0",
+  "description": "My first nodejs app",
+  "main": "nodebasics.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hitesh B",
+  "license": "ISC"
+}

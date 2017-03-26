@@ -46,6 +46,11 @@
     <Compile Include="DIP\INotification.cs" />
     <Compile Include="DIP\Notification.cs" />
     <Compile Include="DIP\SMS.cs" />
+    <Compile Include="Factory\Bike.cs" />
+    <Compile Include="Factory\ConcreteVehicleFactory.cs" />
+    <Compile Include="Factory\IFactory.cs" />
+    <Compile Include="Factory\Scooter.cs" />
+    <Compile Include="Factory\VehicleFactory.cs" />
     <Compile Include="Interface\IPerson.cs" />
     <Compile Include="LSP\CurrentAccount.cs" />
     <Compile Include="LSP\SavingsAccount.cs" />
