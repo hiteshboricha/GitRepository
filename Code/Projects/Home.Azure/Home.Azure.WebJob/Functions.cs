@@ -10,6 +10,7 @@ using Home.Azure.Entities;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure;
 using System.Configuration;
+using Microsoft.Azure.NotificationHubs;
 
 namespace Home.Azure.WebJob
 {
@@ -17,7 +18,7 @@ namespace Home.Azure.WebJob
     {
         // This function will get triggered/executed when a new message is written 
         // on an Azure Queue called queue.
-        public static void ProcessQueueMessage([ServiceBusTrigger("pincodetopic", "pincodesubscription")] string message)
+        public static void ProcessQueueMessage([ServiceBusTrigger("pincodetopic", "pincodesubscription")] string message, [NotificationHub] out Notification notification)
         {
             CloudStorageAccount storageAccount =
             CloudStorageAccount.Parse(ConfigurationManager.ConnectionStrings["AzureWebJobsStorage"].
@@ -39,6 +40,10 @@ namespace Home.Azure.WebJob
 
             TableOperation updateOperation = TableOperation.InsertOrReplace(pin);
             table.Execute(updateOperation);
+                
+            var jsontext = pin;
+
+            notification = new GcmNotification(pin.RowKey);
         }
     }
 }

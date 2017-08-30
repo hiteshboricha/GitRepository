@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Azure.WebJobs.Extensions.NotificationHubs</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Azure.WebJobs.Extensions.NotificationHubs.NotificationHubsConfiguration">
+            <summary>
+            Defines the configuration options for the NotificationHubs binding.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.WebJobs.Extensions.NotificationHubs.NotificationHubsConfiguration.#ctor">
+            <summary>
+            Constructs a new instance.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.WebJobs.Extensions.NotificationHubs.NotificationHubsConfiguration.ConnectionString">
+            <summary>
+            Gets or sets the NotificationHubs ConnectionString to use with the Mobile App.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.WebJobs.Extensions.NotificationHubs.NotificationHubsConfiguration.HubName">
+            <summary>
+            Gets or sets NotificationHubs HubName to use with the MobileApp
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.WebJobs.Extensions.NotificationHubs.NotificationHubsConfiguration.Initialize(Microsoft.Azure.WebJobs.Host.Config.ExtensionConfigContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.Azure.WebJobs.Extensions.NotificationHubs.NotificationHubsConfiguration.ResolveConnectionString(System.String)">
+            <summary>
+            If the attribute ConnectionString is not null or empty, the value is looked up in ConnectionStrings, 
+            AppSettings, and Environment variables, in that order. Otherwise, the config ConnectionString is
+            returned.
+            </summary>
+            <param name="attributeConnectionString">The connection string from the <see cref="T:Microsoft.Azure.WebJobs.NotificationHubAttribute"/>.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Azure.WebJobs.Extensions.NotificationHubs.NotificationHubsConfiguration.ResolveHubName(System.String)">
+            <summary>
+            Returns the attributeHubName, as-is, if it is not null or empty. Because the HubName is not considered
+            a secret, it can be passed as a string literal without requiring an app setting lookup.
+            </summary>
+            <param name="attributeHubName">The hub name from the <see cref="T:Microsoft.Azure.WebJobs.NotificationHubAttribute"/>.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Azure.WebJobs.Extensions.NotificationHubs.INotificationHubClientService">
+            <summary>
+              Defines an interface for NotificationHubClient sendNotification
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.WebJobs.Extensions.NotificationHubs.INotificationHubClientService.SendNotificationAsync(Microsoft.Azure.NotificationHubs.Notification,System.String)">
+            <summary>
+            Asynchronously sends a notification to a tag expression
+            </summary>
+            <param name="notification">notification to send</param>
+            <param name="tagExpression">A tag expression is any boolean expression constructed using the logical operator</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Azure.WebJobs.Extensions.NotificationHubs.INotificationHubClientService.GetNotificationHubClient">
+            <summary>
+            Returns the underlying <see cref="T:Microsoft.Azure.NotificationHubs.NotificationHubClient"/>.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Azure.WebJobs.NotificationHubJobHostConfigurationExtensions">
+            <summary>
+            Extension methods for NotificationHubs integration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.WebJobs.NotificationHubJobHostConfigurationExtensions.UseNotificationHubs(Microsoft.Azure.WebJobs.JobHostConfiguration,Microsoft.Azure.WebJobs.Extensions.NotificationHubs.NotificationHubsConfiguration)">
+            <summary>
+            Enables use of NotificationHubs extension
+            </summary>
+            <param name="config">The <see cref="T:Microsoft.Azure.WebJobs.JobHostConfiguration"/> to configure.</param>
+            <param name="notificationHubsConfig">The <see cref="T:Microsoft.Azure.WebJobs.Extensions.NotificationHubs.NotificationHubsConfiguration"/>to use</param>
+        </member>
+        <member name="T:Microsoft.Azure.WebJobs.NotificationHubAttribute">
+            <summary>
+            Attribute used to bind a parameter to an Azure NotificationHub
+            </summary>
+            <remarks>
+            The method parameter type can be one of the following:
+            <list type="bullet">
+            <item><description><see cref="T:Microsoft.Azure.WebJobs.ICollector`1"/>, where T is either <see cref="T:Microsoft.Azure.NotificationHubs.TemplateNotification"/> or <see cref="T:Microsoft.Azure.NotificationHubs.Notification"/>.</description></item>
+            <item><description><see cref="T:Microsoft.Azure.WebJobs.IAsyncCollector`1"/><see cref="T:Microsoft.Azure.NotificationHubs.TemplateNotification"/> or <see cref="T:Microsoft.Azure.NotificationHubs.Notification"/>.</description></item>
+            <item><description>out T, where T is either <see cref="T:Microsoft.Azure.NotificationHubs.TemplateNotification"/> or <see cref="T:Microsoft.Azure.NotificationHubs.Notification"/>.</description></item>
+            <item><description>out T[], where T is either <see cref="T:Microsoft.Azure.NotificationHubs.TemplateNotification"/> or <see cref="T:Microsoft.Azure.NotificationHubs.Notification"/>.</description></item>
+            <item><description>out string, valid JSON string with template properties to build <see cref="T:Microsoft.Azure.NotificationHubs.TemplateNotification"/></description></item>
+            <item><description>out IDictionary, string key value pairs of templateProperties to build <see cref="T:Microsoft.Azure.NotificationHubs.TemplateNotification"/></description></item>
+            </list>
+            </remarks>
+        </member>
+        <member name="P:Microsoft.Azure.WebJobs.NotificationHubAttribute.TagExpression">
+            <summary>
+            Optional. A tag expression is any boolean expression constructed using the logical operator
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.WebJobs.NotificationHubAttribute.Platform">
+            <summary>
+            Optional. Specify platform for sending native notifications.<see cref="T:Microsoft.Azure.NotificationHubs.NotificationPlatform"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.WebJobs.NotificationHubAttribute.ConnectionStringSetting">
+            <summary>
+            Optional. A string value indicating the app setting to use as the Notification Hubs connection
+            string, if different than the one specified in the <see cref="T:Microsoft.Azure.WebJobs.Extensions.NotificationHubs.NotificationHubsConfiguration"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.WebJobs.NotificationHubAttribute.HubName">
+            <summary>
+            Optional. The Notification Hub Name to use, if different than the one specified in the
+            <see cref="T:Microsoft.Azure.WebJobs.Extensions.NotificationHubs.NotificationHubsConfiguration"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.WebJobs.NotificationHubAttribute.EnableTestSend">
+            <summary>
+            Optional. Boolean value to enable debug send on NotificationHubClient
+            <see cref="T:Microsoft.Azure.NotificationHubs.NotificationHubClient"/>.
+            </summary>
+        </member>
+    </members>
+</doc>

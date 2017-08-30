@@ -22,10 +22,10 @@ namespace Home.Azure.WebJob
             _servicesBusConnectionString = AmbientConnectionStringProvider.Instance.GetConnectionString(ConnectionStringNames.ServiceBus);
             _namespaceManager = NamespaceManager.CreateFromConnectionString(_servicesBusConnectionString);
 
-            
+
             // The following code ensures that the WebJob will be running continuously
 
-            Functions.ProcessQueueMessage("Web job tests");
+            Functions.ProcessQueueMessage("Web job tests", out Microsoft.Azure.NotificationHubs.Notification notification);
 
             JobHostConfiguration config = new JobHostConfiguration();
             ServiceBusConfiguration serviceBusConfig = new ServiceBusConfiguration
@@ -33,7 +33,9 @@ namespace Home.Azure.WebJob
                 ConnectionString = _servicesBusConnectionString
             };
             config.UseServiceBus(serviceBusConfig);
+            config.UseNotificationHubs();
 
+            notification = new Microsoft.Azure.NotificationHubs.GcmNotification("test hub notification");
             var host = new JobHost(config);
             host.RunAndBlock();
         }

@@ -65,3 +65,15 @@ E:\GitRepository\Code\Projects\Home.Azure\Home.Azure.WebJob\bin\Debug\zh-Hans\Sy
 E:\GitRepository\Code\Projects\Home.Azure\Home.Azure.WebJob\bin\Debug\zh-Hant\System.Spatial.resources.dll
 E:\GitRepository\Code\Projects\Home.Azure\Home.Azure.WebJob\obj\Debug\Home.Azure.WebJob.exe
 E:\GitRepository\Code\Projects\Home.Azure\Home.Azure.WebJob\obj\Debug\Home.Azure.WebJob.pdb
+E:\GitRepository\Code\Projects\Home.Azure\Home.Azure.WebJob\bin\Debug\Microsoft.Azure.NotificationHubs.dll
+E:\GitRepository\Code\Projects\Home.Azure\Home.Azure.WebJob\bin\Debug\Microsoft.Azure.WebJobs.Extensions.dll
+E:\GitRepository\Code\Projects\Home.Azure\Home.Azure.WebJob\bin\Debug\Microsoft.Azure.WebJobs.Extensions.NotificationHubs.dll
+E:\GitRepository\Code\Projects\Home.Azure\Home.Azure.WebJob\bin\Debug\Microsoft.ServiceBus.Messaging.EventProcessorHost.dll
+E:\GitRepository\Code\Projects\Home.Azure\Home.Azure.WebJob\bin\Debug\Microsoft.WindowsAzure.Configuration.dll
+E:\GitRepository\Code\Projects\Home.Azure\Home.Azure.WebJob\bin\Debug\NCrontab.dll
+E:\GitRepository\Code\Projects\Home.Azure\Home.Azure.WebJob\bin\Debug\System.Threading.Tasks.Dataflow.dll
+E:\GitRepository\Code\Projects\Home.Azure\Home.Azure.WebJob\bin\Debug\Microsoft.Azure.NotificationHubs.xml
+E:\GitRepository\Code\Projects\Home.Azure\Home.Azure.WebJob\bin\Debug\Microsoft.Azure.WebJobs.Extensions.xml
+E:\GitRepository\Code\Projects\Home.Azure\Home.Azure.WebJob\bin\Debug\Microsoft.Azure.WebJobs.Extensions.NotificationHubs.xml
+E:\GitRepository\Code\Projects\Home.Azure\Home.Azure.WebJob\bin\Debug\Microsoft.ServiceBus.Messaging.EventProcessorHost.xml
+E:\GitRepository\Code\Projects\Home.Azure\Home.Azure.WebJob\bin\Debug\System.Threading.Tasks.Dataflow.xml
