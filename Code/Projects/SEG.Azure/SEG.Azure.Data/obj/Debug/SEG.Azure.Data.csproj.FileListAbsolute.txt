@@ -1,0 +1,15 @@
+D:\Hitesh\Projects\SEG.Azure\SEG.Azure.Data\bin\Debug\SEG.Azure.Data.dll
+D:\Hitesh\Projects\SEG.Azure\SEG.Azure.Data\bin\Debug\SEG.Azure.Data.pdb
+D:\Hitesh\Projects\SEG.Azure\SEG.Azure.Data\bin\Debug\SEG.Azure.Entities.dll
+D:\Hitesh\Projects\SEG.Azure\SEG.Azure.Data\bin\Debug\SEG.Azure.Entities.pdb
+D:\Hitesh\Projects\SEG.Azure\SEG.Azure.Data\obj\Debug\SEG.Azure.Data.csprojResolveAssemblyReference.cache
+D:\Hitesh\Projects\SEG.Azure\SEG.Azure.Data\obj\Debug\SEG.Azure.Data.csproj.CoreCompileInputs.cache
+D:\Hitesh\Projects\SEG.Azure\SEG.Azure.Data\obj\Debug\SEG.Azure.Data.dll
+D:\Hitesh\Projects\SEG.Azure\SEG.Azure.Data\obj\Debug\SEG.Azure.Data.pdb
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.Data\bin\Debug\SEG.Azure.Data.dll
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.Data\bin\Debug\SEG.Azure.Data.pdb
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.Data\bin\Debug\SEG.Azure.Entities.dll
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.Data\bin\Debug\SEG.Azure.Entities.pdb
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.Data\obj\Debug\SEG.Azure.Data.csprojResolveAssemblyReference.cache
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.Data\obj\Debug\SEG.Azure.Data.dll
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.Data\obj\Debug\SEG.Azure.Data.pdb
