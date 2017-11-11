@@ -6,10 +6,6 @@
 }
 
 <h2>Employee List</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
 @if (Model != null)
 {
@@ -54,20 +50,39 @@ else
             @Html.DisplayFor(modelItem => item.LName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Age)
+            @if (item.Age == 0)
+            {
+                <span></span>
+            }
+            else
+            {
+                <span>@item.Age</span>
+            }
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.DateOfBirth)
+            @if (item.DateOfBirth.Date.ToString() == "1/1/1990 12:00:00 AM")
+            {
+                <span></span>
+            }
+            else
+            {
+                <span>@item.DateOfBirth.ToString("dd-MM-yyyy")</span>
+            }
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Address)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.IsActive)
+            @if (item.IsActive == true) {
+                <span>Yes</span>
+            }
+            else
+            {
+                <span>No</span>
+            }
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
             @Html.ActionLink("Delete", "Delete", new { id = item.Id })
         </td>
     </tr>
@@ -75,3 +90,7 @@ else
 }
 
 </table>
+
+<p>
+    @Html.ActionLink("Create New Employee", "Create", null, new { @class = "btn btn-info active" })
+</p>

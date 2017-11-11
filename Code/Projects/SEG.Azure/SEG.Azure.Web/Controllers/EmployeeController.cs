@@ -25,8 +25,8 @@ namespace SEG.Azure.Web.Controllers
             {
                 EmployeeBAL employeebal = new EmployeeBAL();
 
-                List<Employee> employeelistgeneric = employeebal.GetEmployees();
-                var employeeDto = Mapper.Map<List<EmployeeViewModel>>(employeelistgeneric);
+                List<Employee> employeegenericlist = employeebal.GetEmployees();
+                var employeeDto = Mapper.Map<List<EmployeeViewModel>>(employeegenericlist);
 
                 return View(employeeDto);
             }
