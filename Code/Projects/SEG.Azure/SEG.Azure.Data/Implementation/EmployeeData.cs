@@ -49,6 +49,12 @@ namespace SEG.Azure.Data
                 sqlcommand.Parameters.Add("@LastName", SqlDbType.VarChar).Value = employee.LName;
                 //sqlcommand.Parameters.Add("@Age", SqlDbType.Binary).Value = employee.Age;
                 sqlcommand.Parameters.Add("@DOB", SqlDbType.Date).Value = employee.DateOfBirth;
+
+                if (string.IsNullOrEmpty(employee.Address))
+                {
+                    employee.Address = string.Empty;
+                }
+
                 sqlcommand.Parameters.Add("@Address", SqlDbType.VarChar).Value = employee.Address;
                 sqlcommand.Parameters.Add("@IsActive", SqlDbType.Bit).Value = employee.IsActive;
                 sqlcommand.Parameters.Add("@EmployeeIDOut", SqlDbType.Int).Value = 0;
@@ -78,7 +84,7 @@ namespace SEG.Azure.Data
             return employeeid;
         }
 
-        public List<Employee> GetEmployees()
+        public List<Employee> GetEmployees(int employeeid)
         {
             SqlConnection sqlconnection = GetSQLConnection();
             List<Employee> employeelist = new List<Employee>();
@@ -88,6 +94,7 @@ namespace SEG.Azure.Data
             {
                 SqlCommand sqlcommand = new SqlCommand("dbo.usp_GetEmployees", sqlconnection);
                 sqlcommand.CommandType = CommandType.StoredProcedure;
+                sqlcommand.Parameters.Add("@EmployeeID", SqlDbType.Int).Value = employeeid;
 
                 sqlconnection.Open();
 

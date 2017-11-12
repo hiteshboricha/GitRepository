@@ -10,6 +10,6 @@ namespace SEG.Azure.Data
     public interface IEmployeeData
     {
         int InsertEmployee(Employee employee);
-        List<Employee> GetEmployees();
+        List<Employee> GetEmployees(int employeeid);
     }
 }

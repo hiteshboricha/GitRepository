@@ -25,7 +25,7 @@ namespace SEG.Azure.Web.Controllers
             {
                 EmployeeBAL employeebal = new EmployeeBAL();
 
-                List<Employee> employeegenericlist = employeebal.GetEmployees();
+                List<Employee> employeegenericlist = employeebal.GetEmployees(0);
                 var employeeDto = Mapper.Map<List<EmployeeViewModel>>(employeegenericlist);
 
                 return View(employeeDto);
@@ -56,7 +56,10 @@ namespace SEG.Azure.Web.Controllers
                 EmployeeBAL employeebal = new EmployeeBAL();
                 var employeeDto = Mapper.Map<Employee>(employeemodel);
 
-                employeebal.InsertEmployee(employeeDto);
+                if (ModelState.IsValid)
+                {
+                    employeebal.InsertEmployee(employeeDto);
+                }
 
                 return RedirectToAction("List");
             }
@@ -68,17 +71,41 @@ namespace SEG.Azure.Web.Controllers
 
         public ActionResult Edit(int id)
         {
+            List<EmployeeViewModel> employeelist = new List<EmployeeViewModel>();
+
+            try
+            {
+                EmployeeBAL employeebal = new EmployeeBAL();
+
+                List<Employee> employeegenericlist = employeebal.GetEmployees(id);
+                var employeeDto = Mapper.Map<EmployeeViewModel>(employeegenericlist[0]);
+
+                return View(employeeDto);
+            }
+            catch (Exception ex)
+            {
+
+            }
+
             return View();
         }
 
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(EmployeeViewModel employeemodel)
         {
             try
             {
-                return RedirectToAction("Index");
+                EmployeeBAL employeebal = new EmployeeBAL();
+                var employeeDto = Mapper.Map<Employee>(employeemodel);
+
+                if (ModelState.IsValid)
+                {
+                    employeebal.InsertEmployee(employeeDto);
+                }
+
+                return RedirectToAction("List");
             }
-            catch
+            catch (Exception ex)
             {
                 return View();
             }

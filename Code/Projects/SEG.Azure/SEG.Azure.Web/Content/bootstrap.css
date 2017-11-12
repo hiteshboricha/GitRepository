@@ -222,6 +222,11 @@ textarea {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  border:solid 1px red;
+}
+
+tr:hover {
+    background-color: #ffa;
 }
 
 @media print {
@@ -6824,4 +6829,9 @@ td.visible-print {
   td.hidden-print {
     display: none !important;
   }
+}
+
+.tabletrcss {
+    background-color:#AED6F1;
+    border:1px solid #AED6F1;
 }

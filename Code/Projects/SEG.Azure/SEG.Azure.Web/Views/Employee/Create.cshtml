@@ -5,22 +5,21 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Create</h2>
+<h2>Create Employee</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
-        <h4>Employee</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.FName, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.FName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.FName, "", new { @class = "text-danger", value = "5" })
+                @Html.ValidationMessageFor(model => model.FName, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -44,7 +43,7 @@
             @Html.LabelFor(model => model.DateOfBirth, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.DateOfBirth, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.DateOfBirth, "", new { @class = "text-danger" })
+                @*@Html.ValidationMessageFor(model => model.DateOfBirth, "", new { @class = "text-danger" })*@
             </div>
         </div>
 
@@ -75,11 +74,28 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back To Employee List", "List", null, new { @class = "btn btn-info active" })
 </div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+
+@Scripts.Render("~/bundles/jqueryui")
+@Styles.Render("~/Content/cssjqryUi")
+
+<script type="text/javascript">
+
+     $(document).ready(function () {
+         $('input[type=datetime]').datepicker({
+             dateFormat: "mm/dd/yy",
+             changeMonth: true,
+             changeYear: true,
+             yearRange: "-70:+0",
+             maxDate: '0'
+         });
+
+     });
+</script>
 }
 
 

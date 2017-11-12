@@ -6,10 +6,10 @@
 }
 
 <h2>Employee List</h2>
-<table class="table">
+<table class="table" border="1" style="border:1px solid #AED6F1;">
 @if (Model != null)
 {
-    <tr>
+    <tr class="tabletrcss">
         <th>
             @Html.DisplayNameFor(model => model.FName)
         </th>
@@ -66,7 +66,7 @@ else
             }
             else
             {
-                <span>@item.DateOfBirth.ToString("dd-MM-yyyy")</span>
+                <span>@item.DateOfBirth.ToString("dd/MM/yyyy")</span>
             }
         </td>
         <td>

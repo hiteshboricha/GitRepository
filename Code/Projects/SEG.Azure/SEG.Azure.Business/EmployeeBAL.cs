@@ -26,13 +26,13 @@ namespace SEG.Azure.Business
             return employeeid;
         }
 
-        public List<Employee> GetEmployees()
+        public List<Employee> GetEmployees(int employeeid)
         {
             List<Employee> employeelist = new List<Employee>();
             try
             {
                 IEmployeeData employeedal = new EmployeeData();
-                employeelist = employeedal.GetEmployees();
+                employeelist = employeedal.GetEmployees(employeeid);
             }
             catch (Exception ex)
             {
