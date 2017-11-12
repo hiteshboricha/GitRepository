@@ -3,23 +3,35 @@
 }
 
 <div class="row">
+    <div class="jumbotron">
+        Welcome to SEG Azure Intermediate Level Assignment! @*- (Hitesh Boricha : 10612596)*@
+    </div>
+
     <div class="col-md-4">
-        <h2>Getting started</h2>
+        <h2>Employee List</h2>
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            List of Employees added. Users can create, edit and delete employees from this page.
         </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <p>
+            @Html.ActionLink("View >>", "List", "Employee", new { area = "" }, new { @class = "btn btn-info active" })
+        </p>
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <h2>Create</h2>
+        <p>
+            Create will insert a new Employee in the database. First name, last name and DOB are compulsory fields
+        </p>
+        <p>
+            @Html.ActionLink("Create >>", "Create", "Employee", new { area = "" }, new { @class = "btn btn-info active" })
+        </p>
     </div>
     <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <h2>Run Web Job</h2>
+        <p>
+            TBD
+        </p>
+    </div>
+    <div style="height:500px;">
+
     </div>
 </div>
