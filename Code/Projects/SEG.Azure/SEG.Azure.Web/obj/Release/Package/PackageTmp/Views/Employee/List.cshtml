@@ -1,0 +1,96 @@
+﻿@model IEnumerable<SEG.Azure.Web.Models.EmployeeViewModel>
+
+@{
+    ViewBag.Title = "Employee List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Employee List</h2>
+<table class="table" border="1" style="border:1px solid #AED6F1;">
+@if (Model != null)
+{
+    <tr class="tabletrcss">
+        <th>
+            @Html.DisplayNameFor(model => model.FName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </th>
+        <th></th>
+    </tr>
+}
+else
+{
+    <tr>
+        <td><b>No records present!</b></td>
+    </tr>
+}
+    
+@if (Model != null)
+{
+    foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LName)
+        </td>
+        <td>
+            @if (item.Age == 0)
+            {
+                <span></span>
+            }
+            else
+            {
+                <span>@item.Age</span>
+            }
+        </td>
+        <td>
+            @if (item.DateOfBirth.Date.ToString() == "1/1/1990 12:00:00 AM")
+            {
+                <span></span>
+            }
+            else
+            {
+                <span>@item.DateOfBirth.ToString("dd/MM/yyyy")</span>
+            }
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @if (item.IsActive == true) {
+                <span>Yes</span>
+            }
+            else
+            {
+                <span>No</span>
+            }
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+        </td>
+    </tr>
+    }
+}
+
+</table>
+
+<p>
+    @Html.ActionLink("Create New Employee", "Create", null, new { @class = "btn btn-info active" })
+</p>

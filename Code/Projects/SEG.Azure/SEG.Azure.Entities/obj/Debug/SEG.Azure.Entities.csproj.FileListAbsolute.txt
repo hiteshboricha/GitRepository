@@ -7,3 +7,4 @@ E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.Entities\bin\Debug\SEG.Azure.
 E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.Entities\bin\Debug\SEG.Azure.Entities.pdb
 E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.Entities\obj\Debug\SEG.Azure.Entities.dll
 E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.Entities\obj\Debug\SEG.Azure.Entities.pdb
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.Entities\obj\Debug\SEG.Azure.Entities.csproj.CoreCompileInputs.cache

@@ -11,7 +11,7 @@ namespace SEG.Azure.Entities
         public int Id { get; set; }
         public string FName { get; set; }
         public string LName { get; set; }
-        public byte Age { get; set; }
+        public int Age { get; set; }
         public DateTime DateOfBirth { get; set; }
         public string Address { get; set; }
         public bool IsActive { get; set; }

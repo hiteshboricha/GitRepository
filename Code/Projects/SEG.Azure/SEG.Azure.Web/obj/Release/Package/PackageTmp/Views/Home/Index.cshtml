@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    <div class="jumbotron">
+        Welcome to SEG Azure Intermediate Level Assignment! @*- (Hitesh Boricha : 10612596)*@
+    </div>
+
+    <div class="col-md-4">
+        <h2>Employee List</h2>
+        <p>
+            List of Employees added. Users can create, edit and delete employees from this page.
+        </p>
+        <p>
+            @Html.ActionLink("View >>", "List", "Employee", new { area = "" }, new { @class = "btn btn-info active" })
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Create</h2>
+        <p>
+            Create will insert a new Employee in the database. First name, last name and DOB are compulsory fields
+        </p>
+        <p>
+            @Html.ActionLink("Create >>", "Create", "Employee", new { area = "" }, new { @class = "btn btn-info active" })
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Run Web Job</h2>
+        <p>
+            TBD
+        </p>
+    </div>
+    <div style="height:500px;">
+
+    </div>
+</div>

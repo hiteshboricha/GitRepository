@@ -113,8 +113,8 @@ namespace SEG.Azure.Data
                     employee.LName = reader["LastName"] != DBNull.Value ? reader["LastName"].ToString() : 
                             string.Empty;
 
-                    employee.Age = reader["Age"] != DBNull.Value ? byte.Parse(reader["Age"].ToString()) :
-                            byte.Parse("0");
+                    employee.Age = reader["Age"] != DBNull.Value ? int.Parse(reader["Age"].ToString()) :
+                            int.Parse("0");
 
                     employee.DateOfBirth = reader["DOB"] != DBNull.Value ? 
                         DateTime.Parse(reader["DOB"].ToString()) : DateTime.Parse("01/01/0001");
@@ -145,6 +145,36 @@ namespace SEG.Azure.Data
             }
 
             return employeelist;
+        }
+
+        public int UpdateEmployeeDOB()
+        {
+            SqlConnection sqlconnection = GetSQLConnection();
+            int noofemployeesupdated = 0;
+
+            try
+            {   
+                SqlCommand sqlcommand = new SqlCommand("dbo.usp_UpdateEmployeeDOB", sqlconnection);
+                sqlcommand.CommandType = CommandType.StoredProcedure;
+
+                sqlconnection.Open();
+                noofemployeesupdated = sqlcommand.ExecuteNonQuery();
+
+                sqlconnection.Close();
+            }
+            catch (Exception ex)
+            {
+                LogAndThrowApplicationException("Error saving employee to datasource.", ex);
+            }
+            finally
+            {
+                if (sqlconnection.State == ConnectionState.Open)
+                {
+                    sqlconnection.Close();
+                }
+            }
+
+            return noofemployeesupdated;
         }
     }
 }

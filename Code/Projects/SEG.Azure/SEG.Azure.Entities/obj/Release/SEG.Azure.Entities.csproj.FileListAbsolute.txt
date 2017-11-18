@@ -1,0 +1,5 @@
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.Entities\bin\Release\SEG.Azure.Entities.dll
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.Entities\bin\Release\SEG.Azure.Entities.pdb
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.Entities\obj\Release\SEG.Azure.Entities.csproj.CoreCompileInputs.cache
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.Entities\obj\Release\SEG.Azure.Entities.dll
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.Entities\obj\Release\SEG.Azure.Entities.pdb

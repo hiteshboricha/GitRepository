@@ -1,0 +1,13 @@
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.WebJobScheduler\bin\Debug\SEG.Azure.WebJobScheduler.exe.config
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.WebJobScheduler\bin\Debug\SEG.Azure.WebJobScheduler.exe
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.WebJobScheduler\bin\Debug\SEG.Azure.WebJobScheduler.pdb
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.WebJobScheduler\bin\Debug\SEG.Azure.Business.dll
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.WebJobScheduler\bin\Debug\SEG.Azure.Data.dll
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.WebJobScheduler\bin\Debug\SEG.Azure.Entities.dll
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.WebJobScheduler\bin\Debug\SEG.Azure.Business.pdb
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.WebJobScheduler\bin\Debug\SEG.Azure.Data.pdb
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.WebJobScheduler\bin\Debug\SEG.Azure.Entities.pdb
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.WebJobScheduler\obj\Debug\SEG.Azure.WebJobScheduler.csprojResolveAssemblyReference.cache
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.WebJobScheduler\obj\Debug\SEG.Azure.WebJobScheduler.csproj.CoreCompileInputs.cache
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.WebJobScheduler\obj\Debug\SEG.Azure.WebJobScheduler.exe
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.WebJobScheduler\obj\Debug\SEG.Azure.WebJobScheduler.pdb

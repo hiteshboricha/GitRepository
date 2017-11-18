@@ -1,0 +1,10 @@
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.Business\bin\Release\SEG.Azure.Business.dll
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.Business\bin\Release\SEG.Azure.Business.pdb
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.Business\bin\Release\SEG.Azure.Data.dll
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.Business\bin\Release\SEG.Azure.Entities.dll
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.Business\bin\Release\SEG.Azure.Data.pdb
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.Business\bin\Release\SEG.Azure.Entities.pdb
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.Business\obj\Release\SEG.Azure.Business.csprojResolveAssemblyReference.cache
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.Business\obj\Release\SEG.Azure.Business.csproj.CoreCompileInputs.cache
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.Business\obj\Release\SEG.Azure.Business.dll
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.Business\obj\Release\SEG.Azure.Business.pdb

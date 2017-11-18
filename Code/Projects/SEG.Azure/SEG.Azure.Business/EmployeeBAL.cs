@@ -41,5 +41,21 @@ namespace SEG.Azure.Business
 
             return employeelist;
         }
+
+        public int UpdateEmployeeDOB()
+        {
+            int noofemployeesupdated = new int();
+            try
+            {
+                IEmployeeData employeedal = new EmployeeData();
+                noofemployeesupdated = employeedal.UpdateEmployeeDOB();
+            }
+            catch (Exception ex)
+            {
+                LogAndThrowApplicationException("Error updating datasoure", ex);
+            }
+
+            return noofemployeesupdated;
+        }
     }
 }

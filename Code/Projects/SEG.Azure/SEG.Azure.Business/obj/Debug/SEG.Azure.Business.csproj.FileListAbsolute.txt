@@ -17,3 +17,4 @@ E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.Business\bin\Debug\SEG.Azure.
 E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.Business\obj\Debug\SEG.Azure.Business.csprojResolveAssemblyReference.cache
 E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.Business\obj\Debug\SEG.Azure.Business.dll
 E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.Business\obj\Debug\SEG.Azure.Business.pdb
+E:\GitRepository\Code\Projects\SEG.Azure\SEG.Azure.Business\obj\Debug\SEG.Azure.Business.csproj.CoreCompileInputs.cache

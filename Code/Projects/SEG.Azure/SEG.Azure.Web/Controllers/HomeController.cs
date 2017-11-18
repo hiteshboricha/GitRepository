@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using SEG.Azure.Functions;
+using Microsoft.Azure.WebJobs.Host;
 
 namespace SEG.Azure.Web.Controllers
 {
@@ -10,6 +12,7 @@ namespace SEG.Azure.Web.Controllers
     {
         public ActionResult Index()
         {
+            //DeleteEmployeeFunction.Run(new System.Net.Http.HttpRequestMessage(), "", l);
             return View();
         }
 

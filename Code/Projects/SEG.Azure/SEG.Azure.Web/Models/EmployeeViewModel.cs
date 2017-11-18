@@ -21,7 +21,7 @@ namespace SEG.Azure.Web.Models
         public string LName { get; set; }
 
         [DisplayName("Age")]
-        public byte Age { get; set; }
+        public int Age { get; set; }
 
         [DisplayName("DOB")]
         [Required(ErrorMessage = "Please enter Date Of Birth")]

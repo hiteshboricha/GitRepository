@@ -11,5 +11,6 @@ namespace SEG.Azure.Data
     {
         int InsertEmployee(Employee employee);
         List<Employee> GetEmployees(int employeeid);
+        int UpdateEmployeeDOB();
     }
 }
